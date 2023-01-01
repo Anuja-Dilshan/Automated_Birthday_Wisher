@@ -42,7 +42,7 @@ data_as_dict = data.to_dict(orient='records')
 
 today = dt.datetime.now()
 for data_dict in data_as_dict:
-    if data_dict['month'] == today.month and data_dict['day'] == today.day and today.hour == 00:
+    if data_dict['month'] == today.month and data_dict['day'] == today.day:
         random_template()
         send_email()
 
